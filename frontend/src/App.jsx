@@ -10,7 +10,7 @@ function App() {
   return (
     <div className=' h flex flex-col justify-center '>
       <Routes>
-          <Route path='/' element={authUser ? <Home />: <Navigate to={'/login'}/>} />
+          <Route path='/' element={authUser ? <Home />: <Navigate to={'/'}/>} />
           <Route path='/login' element={authUser ? <Navigate to='/' /> :<Login />} />
           <Route path='/signup' element={authUser ? <Navigate to='/' /> : <SignUp />} />
           <Route path="/about" element={<About />} />

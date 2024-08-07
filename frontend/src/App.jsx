@@ -1,5 +1,5 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
-import Home from './pages/home/Home';
+import Home from './pages/home/home';
 import Login from './pages/login/login';
 import SignUp from './pages/signup/SignUp';
 import { Toaster } from 'react-hot-toast';
@@ -10,7 +10,7 @@ function App() {
   return (
     <div className=' h flex flex-col justify-center '>
       <Routes>
-          <Route path='/' element={authUser ? <Home />: <Navigate to={'/'}/>} />
+          <Route path='/' element={authUser ? <Home />: <Navigate to={'/login'}/>} />
           <Route path='/login' element={authUser ? <Navigate to='/' /> :<Login />} />
           <Route path='/signup' element={authUser ? <Navigate to='/' /> : <SignUp />} />
           <Route path="/about" element={<About />} />
